@@ -5,8 +5,8 @@ before_install:
   texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended latex-xcolor
   texlive-pictures pgf lmodern
 script:
-- mkdir _build
-- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build resume.tex
+- make
+- make clean
 deploy:
   provider: pages
   skip-cleanup: true
