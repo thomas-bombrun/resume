@@ -1,0 +1,13 @@
+sudo: required
+dist: trusty
+before_install:
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended
+  texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended latex-xcolor
+  texlive-pictures pgf lmodern
+script:
+- pdflatex -interaction=nonstopmode -halt-on-error resume.tex
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
