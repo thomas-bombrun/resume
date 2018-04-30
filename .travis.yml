@@ -3,10 +3,9 @@ dist: trusty
 before_install:
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
 script:
-- mkdir _build
-- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build test.tex
+- pdflatex -interaction=nonstopmode -halt-on-error resume.tex
 deploy:
   provider: releases
   file:
-  - _build/test.pdf
+  - resume.pdf
   skip_cleanup: true

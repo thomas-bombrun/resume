@@ -1,0 +1,262 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letterpo
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+\usepackage[utf8]{inputenc}
+
+
+\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+
+\usepackage[scale=0.9]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{2.25cm} % Uncomment to change the width of the dates column
+%setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+\usepackage{xpatch}
+\xpatchcmd{\cventry}{.\strut}{\strut}{}{}
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{} % Your first name
+\familyname{Thomas Bombrun} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\mobile{06 95 43 85 92}
+\email{thomas.bombrun@gmail.com}
+\title{}
+%----------------------------------------------------------------------------------------
+\begin{document}
+\makecvtitle % Print the CV title
+\vspace*{-1cm}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\section{Formation}
+\cventry
+    {2012--2016}
+    {Diplôme d'Ingénieur en Informatique et Mathématiques appliquées}
+    {}
+    {Ensimag}
+    {Grenoble}
+    {Filière Ingénierie des Systèmes d'Information}
+    
+\cventry
+    {2010--2012}
+    {L2 Mathématiques et Informatique}
+    {}
+    {Université Joseph Fourier}
+    {Grenoble}
+    {Section Internationale}
+    
+\cventry
+    {2010}
+    {Baccalauréat Scientifique}
+    {}
+    {Lycée François-Jean Armorin}
+    {Drôme}
+    {Mention Bien}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Expériences}
+
+\subsection{Professionnelles}
+
+
+\cventry
+    {Depuis octobre 2016}
+    {Ingénieur Web Fullstack}
+    {}
+    {Cirruseo}
+    {Paris}
+    {
+        \begin{itemize}
+            \item Développement d'applications web basées sur l'environnement Google : Google Cloud Platform et GSuite.
+            \item Depuis mai 2017 : Lead Developer
+            \begin{itemize}
+                \item Responsable du backlog des projets
+                \item Suivi technique des équipes de développeur.
+                \item Référent technique Python et Google Cloud Platform.
+            \end{itemize}
+                        \item Depuis octobre 2017 : Ingénieur DevOps auprès d'Airbus Defence and Space
+            \begin{itemize}
+                \item Développement d'un backend Go de cataloguage d'images sattelites.
+                \item Déploiement de la solution sur différentes solutions cloud.
+            \end{itemize}
+        \end{itemize}
+        \vspace*{1mm}
+        \textit{Python, Google Cloud Platform, Google App Engine, Polymer}
+    }
+
+\cventry
+    {2015}
+    {Projet de Fin d'Études}
+    {5 mois}
+    {Tessi Lab}
+    {Grenoble}
+    {
+        \begin{itemize}
+            \item Conception et implémentation d'une solution de lecture et d'analyse automatique de documents papier photographiés. Cette solution a permis d'automatiser la vérification manuelle de documents au sein de la branche marketing de Tessi.
+            \item Responsable de l'architecture logicielle.
+        \end{itemize}
+        \vspace*{1mm}
+        \textit{Java, Elasticsearch, Traitement d'images, Reconnaissance optique de caractères (Tesseract), Théorie des langages.}
+    }
+
+\cventry
+    {2014}
+    {Stage Assistant Ingénieur}
+    {2 mois}
+    {Sharette}
+    {Paris}
+    {
+        \begin{itemize}
+            \item Développement d'une application mobile de covoiturage.
+        \item Implication dans les prises de décisions de cette start-up.
+        \end{itemize}
+        \vspace*{1mm}
+        \textit{HTML5, AngularJS, PhoneGap}
+    }
+
+\subsection{Académiques}
+
+\cventry
+    {2016}
+    {Projet Système Distribué}
+    {}
+    {Ensimag}
+    {}
+    {
+        \begin{itemize}
+            \item Développement d'une version distribuée de GNU Make.
+            \item Analyse de performances sur un algorithme distribué.
+        \end{itemize}
+        \vspace*{1mm}
+        \textit{Scala, Akka, Grille de calcul}
+    }
+
+%\cventry
+%   {2016}
+%   {Projet d'Infrastructure Logicielle pour le Bâtiment Intelligent}
+%   {}
+%   {Ensimag}
+%   {}
+%   {
+%       \begin{itemize}
+%           \item Réalisation d'une maquette de démonstration domotique.
+%       \end{itemize}
+%       \vspace*{1mm}
+%       \textit{OpenHab, Arduino, ESP8266, MQTT}
+%   }
+
+\cventry
+    {2016}
+    {Challenge Open Data}
+    {}
+    {Ensimag}
+    {}
+    {
+        \begin{itemize}
+            \item Production d'une visualisation interactive des similarités les entre députés via l'analyse des comptes rendus de vote de l'Assemblée Nationale.
+        \end{itemize}
+        \vspace*{1mm}
+        \textit{HTML5 Canvas, PostgreSQL, Python}
+    }
+
+%\cventry
+%   {2014}
+%   {Projet Web}
+%   {}
+%   {Ensimag}
+%   {}
+%   {
+%       \begin{itemize}
+%           \item Conception et développement d'un jeu web pour le CCSTI de Grenoble.
+%       \end{itemize}
+%       \vspace*{1mm}
+%       \textit{JavaScript, Phaser.}
+%   }
+
+
+% \subsection{Associatives}
+
+% \cventry
+%   {2013--2014}
+%   {Membre du Bureau des étudiants}
+%   {}
+%   {Ensimag}
+%   {}
+%   {}
+
+% \cventry
+%   {}
+%   {Chef d'équipe au sein du festival Crest Jazz Vocal}
+%   {}
+%   {Drôme}
+%   {}
+%   {}
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Compétences}
+
+\cvdoubleitem
+    {Langages}
+    {Python, Java, C, C\texttt{++}, Scala, ADA}
+    {Autres}
+    {Bash, \LaTeX, Unix, Docker, Google Cloud Platform}
+\cvdoubleitem
+    {Web}
+    {HTML5, CSS, JavaScript, Polymer, AngularJS, React, Node.js}
+    {Base de données}
+    {Oracle SQL, PostgreSQL, MongoDB, Elasticsearch, Google Cloud Datastore}
+
+\vspace*{0.5cm}
+
+% \cvitem
+%     {}
+%     {Capable et prêt à monter en compétences sur toutes technologies ou langages.}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Langues}
+
+\cvitemwithcomment
+    {}
+    {Anglais : Courant}
+    {990/990 au TOEIC (décembre 2013)}
+
+
+\end{document}
