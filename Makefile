@@ -9,4 +9,4 @@ clean:
 	ls -d  _build/* | grep -v resume.pdf | xargs rm
 
 watch:
-	while inotifywait -e close_write resume.tex; do make clean; make; done
+	while inotifywait -e close_write *; do make clean; make; done
