@@ -1,0 +1,130 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letterpo
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+
+\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+
+\usepackage[scale=0.9]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{2.25cm} % Uncomment to change the width of the dates column
+%setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+\usepackage{xpatch}
+\xpatchcmd{\cventry}{.\strut}{\strut}{}{}
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{} % Your first name
+\familyname{Thomas Bombrun} % Your last name
+
+\title{Software Engineer} 
+
+% All information in this block is optional, comment out any lines you don't need
+\mobile{+336 95 43 85 92}
+\email{thomas.bombrun@gmail.com}
+\title{}
+%\extrainfo{\href{http://github.com/thomas-bombrun/resume}{github.com/thomas-bombrun/resume}} % When bragging is in order
+
+%----------------------------------------------------------------------------------------
+\begin{document}
+\makecvtitle % Print the CV title
+\vspace*{-0.75cm}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Work experience}
+
+\input{jobs/airbus_en.tex}
+
+\input{jobs/cirruseo_en.tex}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\cventry
+    {2012--2016}
+    {\textit{Titre d’ingénieur} in computer science and applied mathematics }
+    {}
+    {Ensimag}
+    {Grenoble, France}
+    {Specialization : Information systems engineering}
+    
+\cventry
+    {2010--2012}
+    {L2 Mathématiques et Informatique}
+    {}
+    {Joseph Fourier University}
+    {Grenoble, France}
+    {International Section}
+    
+\cventry
+    {2010}
+    {French Scientific Baccalaureate}
+    {}
+    {Lycée François-Jean Armorin}
+    {Crest, Drôme, France}
+    {With high honours}
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Skills}
+
+\cvline{\footnotesize Languages}{Python, Go, Java, C, C\texttt{++}, Scala, ADA}
+\cvline{\footnotesize Databases}{Oracle SQL, PostgreSQL, MongoDB, Elasticsearch, Google Cloud Datastore}
+\cvline{\footnotesize Web}{HTML5, CSS, JavaScript, Polymer, AngularJS, React, Node.js}
+\cvline{\footnotesize DevOps}{Docker, Kubernetes, Helm, Terraform, GitLab, Github, Travis CI, Google Cloud Platform}
+
+% \cvitem
+%     {}
+%     {Capable et prêt à monter en compétences sur toutes technologies ou langages.}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Languages}
+
+\cvitemwithcomment
+    {}
+    {French : Native}
+    {}
+
+    \cvitemwithcomment
+    {}
+    {English : Professional proficiency}
+    {990/990  TOEIC (2013)}
+\end{document}
