@@ -20,7 +20,7 @@ jobs:
           # Upload entire repository
           path: '.'
       - name: Deploy to GitHub Pages
-        if: ${{ github.ref == 'ref/head/master' }}
+        if: ${{ github.ref == 'ref/heads/master' }}
         id: deployment
         uses: actions/deploy-pages@v4
     permissions:
